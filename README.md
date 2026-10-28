@@ -176,9 +176,9 @@ Then do the same with 30-50 of your own real leads, labeled by someone on your t
 
 ## What I learned testing it
 
-I used Jev on my own library of marketing AI skills, asking whether one skill was quietly rebuilding another. Same pair, same question, three versions of the input:
+I use Jev to check my own library of marketing AI skills for drift: two skills that have slowly started doing the same job. Same pair of skills, same question, three versions of the input:
 
-- full description: **0.98** (reimplementation, merge these)
+- full description: **0.98** (drift, merge these)
 - cut to 1,100 characters: **0.58** (worth a look)
 - cut to 800 characters: **0.14** (clean)
 
