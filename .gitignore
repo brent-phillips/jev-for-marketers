@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.DS_Store
+.env
+# run outputs
+*_jev.csv
+results*.csv
