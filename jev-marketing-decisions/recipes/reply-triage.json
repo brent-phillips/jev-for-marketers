@@ -1,0 +1,31 @@
+{
+  "name": "Outbound reply triage",
+  "description": "Sort replies to outbound email or LinkedIn sequences so reps only open the ones that need them.",
+  "model": "jev-latest",
+  "state_columns": [
+    "reply_text"
+  ],
+  "bands": {
+    "act": 0.85,
+    "review": 0.6
+  },
+  "questions": {
+    "reply_type": {
+      "type": "choice",
+      "instructions": "What is the sender doing in this reply?",
+      "criteria": {
+        "out_of_office": "Automatic away or out-of-office message",
+        "unsubscribe": "Asks to stop emailing or be removed from the list",
+        "not_interested": "Says no, with no request to be removed",
+        "not_now": "Interested in principle but asks to reconnect later",
+        "referral": "Points to a different person to talk to",
+        "question": "Asks a question about the product, price or company before deciding",
+        "interested": "Wants a meeting, demo or next step now"
+      }
+    },
+    "names_another_person": {
+      "type": "noul",
+      "instructions": "The reply names or copies another person who should be contacted instead."
+    }
+  }
+}

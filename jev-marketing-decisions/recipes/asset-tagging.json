@@ -1,0 +1,35 @@
+{
+  "name": "Content and asset tagging",
+  "description": "Tag a content library by persona and funnel stage so it can be found, reported on and reused. Edit personas to match yours.",
+  "model": "jev-latest",
+  "state_columns": [
+    "title",
+    "summary"
+  ],
+  "bands": {
+    "act": 0.85,
+    "review": 0.6
+  },
+  "questions": {
+    "persona": {
+      "type": "choice",
+      "instructions": "Who is this asset mainly written for?",
+      "criteria": {
+        "general": "No specific persona",
+        "executive": "Senior leaders deciding on budget and strategy",
+        "practitioner": "Hands-on users doing the work day to day",
+        "technical": "Engineers, IT or security reviewers evaluating fit"
+      }
+    },
+    "funnel_stage": {
+      "type": "choice",
+      "instructions": "Which buying stage does this asset serve best?",
+      "criteria": {
+        "awareness": "Explains a problem or trend; doesn't mention our product much",
+        "consideration": "Compares approaches or explains how our kind of solution works",
+        "decision": "Proves our product specifically: case studies, ROI, pricing, security",
+        "retention": "Helps existing customers get more value"
+      }
+    }
+  }
+}

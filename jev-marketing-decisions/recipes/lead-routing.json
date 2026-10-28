@@ -1,0 +1,41 @@
+{
+  "name": "Inbound lead routing",
+  "description": "Sort inbound form fills by ICP fit, buyer role and intent before a person touches them. Company size is left out on purpose: Jev is weak with numbers, so do size bands in your CRM or spreadsheet and combine them with these answers. Edit the icp_fit criteria to match your ICP.",
+  "model": "jev-latest",
+  "state_columns": [
+    "company",
+    "job_title",
+    "industry",
+    "message"
+  ],
+  "bands": {
+    "act": 0.85,
+    "review": 0.6
+  },
+  "questions": {
+    "icp_fit": {
+      "type": "choice",
+      "instructions": "Is this company in a market we sell to, based on company and industry?",
+      "criteria": {
+        "not_a_fit": "Consumer, school, student, agency or consultancy, or a competitor",
+        "adjacent": "A business, but outside our core industries; worth a light touch",
+        "core": "A business in one of our core industries: B2B software, logistics, healthcare technology, or manufacturing (example ICP: replace with yours)"
+      }
+    },
+    "buyer_role": {
+      "type": "choice",
+      "instructions": "What role does this person most likely play in a buying decision, based on job_title?",
+      "criteria": {
+        "vendor_or_spam": "Selling something to us, or not a real inquiry",
+        "student_or_job_seeker": "Student, researcher, or looking for a job",
+        "practitioner": "Hands-on user of the product, individual contributor",
+        "influencer": "Manager or senior individual contributor who shapes the decision",
+        "decision_maker": "Director, VP, C-level, or owner who signs off on purchases"
+      }
+    },
+    "sales_intent": {
+      "type": "noul",
+      "instructions": "The message asks for a demo, pricing, a trial, or a conversation with sales."
+    }
+  }
+}

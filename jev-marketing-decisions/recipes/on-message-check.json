@@ -1,0 +1,39 @@
+{
+  "name": "On-message content check",
+  "description": "Check drafts (blog posts, ads, emails, social) against your messaging before they ship. Replace the bracketed pillar text with your own.",
+  "model": "jev-latest",
+  "state_columns": [
+    "title",
+    "content"
+  ],
+  "bands": {
+    "act": 0.85,
+    "review": 0.6
+  },
+  "questions": {
+    "messaging_fit": {
+      "type": "score",
+      "instructions": "How clearly does this content express our core message: [replace with your one-sentence positioning]?",
+      "criteria": [
+        "Doesn't express it at all",
+        "Touches on it indirectly",
+        "Expresses it clearly in at least one place",
+        "Built around it from start to finish"
+      ]
+    },
+    "primary_pillar": {
+      "type": "choice",
+      "instructions": "Which messaging pillar does this content mainly support?",
+      "criteria": {
+        "none": "Doesn't clearly support any pillar",
+        "pillar_1": "[Pillar 1: describe it]",
+        "pillar_2": "[Pillar 2: describe it]",
+        "pillar_3": "[Pillar 3: describe it]"
+      }
+    },
+    "unsupported_claim": {
+      "type": "noul",
+      "instructions": "The content states a number, ranking or superlative (fastest, best, #1, only) without naming a source."
+    }
+  }
+}
