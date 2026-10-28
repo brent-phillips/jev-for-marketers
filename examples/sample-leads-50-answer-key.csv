@@ -1,0 +1,51 @@
+lead_id,icp_fit,buyer_role,sales_intent,difficulty,what_it_tests
+L01,core,decision_maker,yes,easy,"Clear buyer, clear ask"
+L02,core,practitioner,no,easy,"Content download, no sales ask"
+L03,not_a_fit,student_or_job_seeker,no,easy,Student
+L04,not_a_fit,vendor_or_spam,no,trap,Vendor pitch that sounds like sales interest
+L05,core,decision_maker,yes,easy,Pricing ask
+L06,core,practitioner,no,trap,Empty message
+L07,core,decision_maker,yes,easy,"Evaluation, C-level"
+L08,core,influencer,yes,easy,"Trial request, manager"
+L09,adjacent,decision_maker,yes,easy,Outside core industries
+L10,core,practitioner,no,easy,"Product question, no sales ask"
+L11,adjacent,decision_maker,yes,easy,"Small adjacent business, owner"
+L12,core,decision_maker,yes,easy,"Replacement, CEO"
+L13,core,influencer,no,easy,Asset request only
+L14,core,decision_maker,yes,easy,Demo ask
+L15,adjacent,practitioner,no,easy,"Fan, no ask"
+L16,adjacent,decision_maker,yes,easy,"Terse demo ask, adjacent"
+L17,not_a_fit,student_or_job_seeker,no,easy,Academic research
+L18,not_a_fit,student_or_job_seeker,no,easy,Job seeker
+L19,adjacent,influencer,yes,easy,"Enterprise question, manager"
+L20,adjacent,decision_maker|influencer,no,easy,Vague curiosity
+L21,not_a_fit,practitioner|influencer,yes|no,trap,School asking about price
+L22,core,influencer,yes,easy,Use-case plus call
+L23,adjacent,decision_maker,yes,easy,"CMO, pricing"
+L24,adjacent,practitioner,no,trap,Unsubscribe sent via the demo form
+L25,core,practitioner,no,trap,"Technical evaluator, no explicit sales ask"
+L26,not_a_fit,vendor_or_spam,no,trap,Junk submission
+L27,*,practitioner|student_or_job_seeker,no,trap,Prompt injection in the message
+L28,core,influencer,yes,trap,Spanish-language lead
+L29,core,decision_maker,yes,trap,"Typos, all caps, abbreviations"
+L30,core,decision_maker|influencer,yes|no,trap,"Vague title, vague ask"
+L31,adjacent,student_or_job_seeker|practitioner,yes,trap,Message contradicts the title
+L32,core,decision_maker,yes,trap,Double negative
+L33,core,influencer,yes,trap,Says no to demo but asks for pricing
+L34,not_a_fit,influencer|practitioner,yes,trap,Consultant buying for a client
+L35,core,practitioner,no,trap,Explicitly declines
+L36,adjacent,influencer,yes,trap,Healthcare provider vs healthcare tech
+L37,adjacent|not_a_fit,influencer|decision_maker,yes,trap,Public sector RFP
+L38,not_a_fit|adjacent,decision_maker,yes,trap,University buyer
+L39,adjacent,practitioner|influencer,no,trap,Wrong form
+L40,not_a_fit,*,yes|no,trap,Competitor asking for a demo
+L41,core,*,no,trap,Existing customer support issue
+L42,not_a_fit,decision_maker,yes|no,trap,"Partner, not buyer"
+L43,adjacent|not_a_fit,*,no,trap,Press inquiry
+L44,not_a_fit,*,no,trap,"Educator, free access"
+L45,core,decision_maker,yes,easy,Late-stage buyer
+L46,core,decision_maker,yes,easy,Quote plus demo
+L47,core,practitioner,no,easy,Newsletter signup
+L48,core,influencer|practitioner,no,trap,"Confused visitor, right industry"
+L49,core,decision_maker,yes,easy,Strong buying signal without the word demo
+L50,core,practitioner,yes,trap,Practitioner requesting a demo for their boss
